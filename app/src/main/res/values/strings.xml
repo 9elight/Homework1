@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Homework1</string>
+    <string name="airLinesName">Super AirLines</string>
+    <string name="flight">Flight</string>
+    <string name="seat">Seat"</string>
+    <string name="group">Group</string>
+    <string name="Gate">Gate</string>
+    <string name="val1">AC182</string>
+    <string name="val2">24</string>
+    <string name="val3">5</string>
+    <string name="val4">34A</string>
+    <string name="Bt">Boarding Time</string>
+    <string name="R">Remaining</string>
+    <string name="time">3:00pm</string>
+    <string name="rt">1:32:45</string>
+    <string name="name">JOHN MAYER</string>
+    <string name="ticketType">BUSINESS</string>
+    <string name="Departure">Departure</string>
+    <string name="Arrival">Arrival</string>
+    <string name="depVal">YYZ</string>
+    <string name="ArrVal">LHR</string>
+    <string name="city1">Toronto</string>
+    <string name="city2">London</string>
+    <string name="time1">3:30pm</string>
+    <string name="time2">9:25pm</string>
+</resources>
