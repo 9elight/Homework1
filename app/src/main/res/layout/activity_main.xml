@@ -10,8 +10,8 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
         android:text="@string/name"
         android:textColor="@color/blackTextColor"
         android:textSize="15sp"
@@ -22,24 +22,21 @@
         android:id="@+id/business"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
         android:text="@string/ticketType"
         android:textColor="@color/blueTextColor"
         android:textSize="15sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        />
+        app:layout_constraintLeft_toLeftOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <TextView
         android:id="@+id/departure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         android:text="@string/Departure"
         android:textColor="@color/grayTextColor"
         android:textSize="20sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/name"
         app:layout_constraintTop_toBottomOf="@+id/business" />
 
     <TextView
@@ -58,33 +55,31 @@
         android:id="@+id/YYZ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         android:text="@string/depVal"
         android:textColor="@color/blackTextColor"
-        android:textSize="45sp"
+        android:textSize="35sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/departure"
         app:layout_constraintTop_toBottomOf="@+id/departure"
 
-         />
+        />
 
     <TextView
         android:id="@+id/LHR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="95dp"
         android:layout_marginTop="20dp"
         android:text="@string/ArrVal"
         android:textColor="@color/blackTextColor"
-        android:textSize="45sp"
+        android:textSize="35sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toRightOf="@+id/YYZ"
+        app:layout_constraintLeft_toLeftOf="@id/arrival"
         app:layout_constraintTop_toBottomOf="@+id/arrival" />
 
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginTop="30sp"
         android:src="@drawable/airplanes"
         app:layout_constraintLeft_toRightOf="@+id/YYZ"
@@ -95,35 +90,33 @@
         android:id="@+id/Toronto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
+
         android:layout_marginTop="20dp"
         android:text="@string/city1"
         android:textSize="15sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/YYZ"
         app:layout_constraintTop_toBottomOf="@+id/YYZ" />
 
     <TextView
         android:id="@+id/London"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="95dp"
         android:layout_marginTop="20dp"
         android:text="@string/city2"
         android:textSize="15sp"
-        app:layout_constraintLeft_toRightOf="@+id/YYZ"
+        app:layout_constraintLeft_toLeftOf="@+id/LHR"
         app:layout_constraintTop_toBottomOf="@+id/LHR" />
 
     <TextView
         android:id="@+id/torontoTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
         android:layout_marginTop="10sp"
         android:text="@string/time1"
         android:textColor="@color/blackTextColor"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/Toronto"
         app:layout_constraintTop_toBottomOf="@+id/Toronto" />
 
     <TextView
@@ -143,17 +136,18 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/darkLayout"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="30dp"
         android:background="@color/background_color2"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/yellowLayout">
+        app:layout_constraintTop_toBottomOf="@id/torontoTime">
 
         <TextView
             android:id="@+id/bt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="@string/Bt"
             android:textColor="@color/grayTextColor"
             android:textSize="20sp"
@@ -164,13 +158,12 @@
             android:id="@+id/Remaining"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:layout_marginRight="50dp"
             android:text="@string/R"
             android:textColor="@color/grayTextColor"
             android:textSize="20sp"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/bt" />
 
         <TextView
             android:id="@+id/time2"
@@ -204,17 +197,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/yellowLayout"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="110dp"
         android:background="@color/background_color1"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/barcode">
+        app:layout_constraintTop_toBottomOf="@id/darkLayout">
 
         <TextView
             android:id="@+id/flight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60sp"
-            android:layout_marginTop="40sp"
+            android:layout_marginTop="20dp"
             android:text="@string/flight"
             android:textSize="15sp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -227,33 +220,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
+
             android:text="@string/Gate"
             android:textSize="15dp"
             app:layout_constraintLeft_toRightOf="@id/flight"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/flight" />
 
         <TextView
             android:id="@+id/group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
+
             android:text="@string/group"
             android:textSize="15dp"
             app:layout_constraintLeft_toRightOf="@id/gate"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/gate" />
 
         <TextView
             android:id="@+id/seat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
             android:text="@string/seat"
             android:textSize="15sp"
             app:layout_constraintLeft_toRightOf="@id/group"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/group" />
 
         <TextView
             android:id="@+id/val1"
@@ -310,24 +302,34 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/barcode"
-        android:layout_width="180dp"
-        android:layout_height="100dp"
-        android:src="@drawable/barcode"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yellowLayout">
 
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="50sp"
-        android:text="@string/airLinesName"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/barcode"
-        app:layout_constraintRight_toLeftOf="@id/barcode"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/barcode" />
+        <ImageView
+            android:id="@+id/barcode"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/barcode"
+            app:layout_constraintLeft_toRightOf="@id/superAirlines"
+            app:layout_constraintTop_toTopOf="@id/superAirlines" />
+
+        <TextView
+            android:id="@+id/superAirlines"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="48dp"
+
+            android:text="@string/airLinesName"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
